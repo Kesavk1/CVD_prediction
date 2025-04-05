@@ -1,0 +1,30 @@
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from matplotlib.colors import ListedColormap
+from sklearn.model_selection import train_test_split
+from scipy.stats import boxcox
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.model_selection import GridSearchCV, StratifiedKFold
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+
+%matplotlib inline
+
+# Set the resolution of the plotted figures
+plt.rcParams['figure.dpi'] = 200
+
+# Configure Seaborn plot styles: Set background color and use dark grid
+sns.set(rc={'axes.facecolor': '#faded9'}, style='darkgrid')
+
+#CSV read
+df = pd.read_csv('/input/../...csv')
+df 
